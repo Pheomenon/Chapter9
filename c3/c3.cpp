@@ -2,14 +2,35 @@
 //
 
 #include <iostream>
+#include <cstring>
+#include <new>
+using namespace std;
 struct chaff
 {
 	char dross[20];
 	int slag;
 };
+char buffer1[50];
+char buffer2[500];
 int main()
 {
-     
+	chaff* p1;
+	int* p2;
+
+	p1 = new (buffer1) chaff;
+	p2 = new (buffer2) int[20];
+	
+
+	chaff* pst = new chaff[2];
+	strcpy_s(pst[0].dross, "DROSS1");
+	pst[0].slag = 999;
+	strcpy_s(pst[1].dross, "DROSS2");
+	pst[1].slag = 1000;
+
+	for (int i = 0; i < 2; i++) {
+		cout << pst[i].dross <<" Address: "<<&pst[i].dross<< endl;
+		cout << pst[i].slag << " Address: "<<&pst[i].slag << endl<<endl;
+	}
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
