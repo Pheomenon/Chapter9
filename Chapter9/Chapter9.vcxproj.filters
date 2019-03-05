@@ -15,11 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Chapter9.cpp">
+    <ClCompile Include="c1.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="golf.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <None Include="cpp.hint" />
   </ItemGroup>
 </Project>
