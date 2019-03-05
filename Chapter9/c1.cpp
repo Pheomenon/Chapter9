@@ -1,6 +1,7 @@
 ﻿// Chapter9.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 //
 #include <iostream>
+#include <cstring>
 #include "golf.cpp"
 using namespace std;
 int main() {
@@ -31,7 +32,10 @@ int main() {
 	*/
 	}	
 void setgolf(golf& g, const char* name, int hc) {
-	*g.fullname = *name;  // 这个问题周末解决
+	
+	strcpy_s(g.fullname,name);  //除非是在初始化的时候赋值，
+								//否则在给字符数组赋值的时候应使用strcpy_s() 
+	 
 	g.handicap = hc;
 	cout << g.fullname << endl;
 	cout << g.handicap << endl;
