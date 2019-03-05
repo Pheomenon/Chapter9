@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 using namespace std;
+
 //function prototype
 void strcount(string str);
 int main()
